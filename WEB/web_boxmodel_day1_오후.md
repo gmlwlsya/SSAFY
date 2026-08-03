@@ -378,6 +378,8 @@ relative 박스가 이동해도 원래 본인의 과거 위치는 그대로 유�
         - 03.absolute.html
             - absolute 활용
 ```
+- 실제 포지션 활용 예시
+  ![alt text](images/absolute_ex.png)
 
 <br>
 
@@ -404,6 +406,8 @@ viewport 내가 보는 화면
 -> 뷰포트 기준으로 고정을 시켜서 화면이 이동해도 고정된 위치에 계속 존재
 예: 웹툰의 이동 화살표
 ```
+- 실제 활용 예시
+  ![alt text](images/fixed_ex.png)
 <br>
 
 #### 5. sitcky
@@ -414,6 +418,9 @@ viewport 내가 보는 화면
   - 이전 stiky 요소와 다음 stiky 요소의 위치가 겹치게 되기 때문
 
 ![alt text](images/stiky.png)
+
+- 실제 활용 예시
+  ![alt text](images/sticky_ex.png)
 
 ```
 참고) web > 03_css_layout_position
@@ -601,11 +608,17 @@ viewport 내가 보는 화면
 #### 2. flex-direction
 
 * flex item이 **나열되는 방향을 지정**
-* **속성**
+
+**속성**
 * `row` (기본값): 아이템을 가로 방향으로, 왼쪽에서 오른쪽으로 배치
 * `column`: 아이템을 세로 방향으로, 위에서 아래로 배치
 * `"-reverse"`로 지정하면 flex item 배치의 시작 선과 끝 선이 서로 바뀜
-
+  
+<details>
+<summary>상세 속성 이미지</summary>
+<!-- 토글 안에 들어갈 내용 (이미지 마크다운) -->
+![alt text](images/flex-direction.png)
+</details>
 
 
 ```css
@@ -635,6 +648,12 @@ viewport 내가 보는 화면
 * `nowrap` (기본 값): 줄 바꿈을 하지 않음
 * `wrap`: 여러 줄에 걸쳐 배치될 수 있게 설정 (위에서 아래로 쌓임)
 * `wrap-reverse`: 여러 줄에 걸쳐 배치되나, 줄이 쌓이는 방향이 반대(역순)로 설정
+<details>
+<summary>상세 속성 이미지</summary>
+<!-- 토글 안에 들어갈 내용 (이미지 마크다운) -->
+![alt text](images/flex-wrap.png)
+</details>
+
 
 ```css
 .container {
@@ -655,8 +674,11 @@ viewport 내가 보는 화면
 * `flex-start` (기본값): 주 축의 시작점으로 정렬
 * `center`: 주 축의 중앙으로 정렬
 * `flex-end`: 주 축의 끝점으로 정렬
-
-
+<details>
+<summary>상세 속성 이미지</summary>
+<!-- 토글 안에 들어갈 내용 (이미지 마크다운) -->
+![alt text](images/justify-content.png)
+</details>
 
 ```css
 .container {
@@ -687,7 +709,11 @@ viewport 내가 보는 화면
 * `flex-start`: 여러 줄을 교차 축의 시작점(보통 위쪽)에 맞춰 정렬
 * `flex-end`: 여러 줄을 교차 축의 끝점(보통 아래쪽)에 맞춰 정렬
 
-
+<details>
+<summary>상세 속성 이미지</summary>
+<!-- 토글 안에 들어갈 내용 (이미지 마크다운) -->
+![alt text](images/align-content.png)
+</details>
 
 ```css
 .container {
@@ -713,7 +739,11 @@ viewport 내가 보는 화면
 * `flex-start`: 아이템을 교차 축의 시작점(가로 방향일 경우 위쪽)에 맞춰 정렬
 * `flex-end`: 아이템을 교차 축의 끝점(가로 방향일 경우 아래쪽)에 맞춰 정렬
 
-
+<details>
+<summary>상세 속성 이미지</summary>
+<!-- 토글 안에 들어갈 내용 (이미지 마크다운) -->
+![alt text](images/align-items.png)
+</details>
 
 ```css
 .container {
@@ -741,7 +771,11 @@ viewport 내가 보는 화면
 * `center`: 해당 아이템만 교차 축의 중앙에 정렬
 * `flex-start`: 해당 아이템만 교차 축의 시작점(가로 방향일 경우 위쪽)에 정렬
 * `flex-end`: 해당 아이템만 교차 축의 끝점(가로 방향일 경우 아래쪽)에 정렬
-
+<details>
+<summary>상세 속성 이미지</summary>
+<!-- 토글 안에 들어갈 내용 (이미지 마크다운) -->
+![alt text](images/align-self.png)
+</details>
 
 
 ```css
@@ -846,3 +880,436 @@ viewport 내가 보는 화면
 <br>
 
 ## 참고
+### 마진 상쇄 (margin collapsing)
+- 두 block 타입 요소의 margin top과 bottom이 만나 더 큰 margin으로 결합되는 현상
+  ![alt text](images/마진상쇄.png)
+
+<br>
+
+- 마진 상쇄 예시
+  - 두 요소 모두 margin이 20px이지만 실제 두 요소의 상/하 공간은 40이 아닌 20으로 상쇄됨
+  
+
+> **TIP: 마진상쇄가 발생하는 이유**
+> * 복잡한 레이아웃에서 요소 간 간격을 일관 되게 유지할 수 있습니다.(일관성)
+> * 요소 간의 간격을 더 예측 가능하고 관리하기 쉽게 만들 수 있습니다. (단순성)
+> 
+
+이미지 속 내용을 마크다운 형식으로 정리해 드립니다.
+
+---
+### 박스 타입 별 수평 정렬
+#### Block 요소의 수평 중앙 정렬
+
+* `margin: auto` 사용
+* 블록의 너비를 지정하고 좌우 마진을 `auto`로 설정
+
+
+```html
+<div class="box margin-auto">
+</div>
+```
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+  border: 1px solid black;
+}
+.margin-auto {
+  margin: 0 auto;
+}
+```
+
+#### Inline 요소의 수평 중앙 정렬
+
+* `text-align` 사용
+* 부모 요소에 적용
+
+**HTML**
+
+```html
+<div class="text-center">
+  <span>inline 요소</span>
+</div>
+
+```
+
+**CSS**
+
+```css
+.text-center {
+  text-align: center;
+}
+
+```
+
+#### Inline-block 요소의 수평 중앙 정렬
+
+* `text-align` 사용
+* 부모 요소에 적용
+
+> 💡 **inline-block**
+> inline과 block의 특징을 모두 가진 특별한 display 속성 값
+
+**HTML**
+
+```html
+<div class="text-center">
+  <div class="box inline-block"></div>
+</div>
+
+```
+
+**CSS**
+
+```css
+.text-center {
+  text-align: center;
+}
+
+.inline-block {
+  display: inline-block;
+}
+```
+<br>
+
+-------
+### Flexbox Shorthand 속성
+이미지 속 내용을 깔끔하게 정리해 드립니다.
+
+---
+
+## Shorthand: "flex-flow"
+
+* `flex-direction`과 `flex-wrap` 속성을 한 번에 지정할 수 있는 단축 속성
+
+**CSS 예시**
+
+```css
+/* 기본 속성 사용 시 */
+.container {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* 단축 속성 사용 시 */
+.container {
+  flex-flow: flex-direction flex-wrap;
+}
+
+```
+
+---
+
+## Shorthand: "flex"
+
+* `flex-grow`, `flex-shrink`, `flex-basis` 속성을 한 번에 설정할 수 있는 단축 속성 (기본값으로는 `1, 1, 0%` 로 설정)
+
+#### 단축 속성 사용 vs 기본 속성 풀어서 표현
+
+```css
+/* ==========================================
+   1. One value, unitless number: flex-grow
+   ========================================== */
+/* 단축 속성 */
+flex: 2;
+
+/* 기본 속성 풀어서 표현 */
+flex-grow: 2;
+flex-shrink: 1;
+flex-basis: 0%;
+
+
+/* ==========================================
+   2. One value, length or percentage: flex-basis
+   ========================================== */
+/* 단축 속성 */
+flex: 10rem;
+flex: 30%;
+
+/* 기본 속성 풀어서 표현 */
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 10rem; /* 또는 flex-basis: 30%; */
+
+
+/* ==========================================
+   3. Two values: flex-grow | flex-basis
+   ========================================== */
+/* 단축 속성 */
+flex: 1 30px;
+
+/* 기본 속성 풀어서 표현 */
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 30px;
+
+
+/* ==========================================
+   4. Two values: flex-grow | flex-shrink
+   ========================================== */
+/* 단축 속성 */
+flex: 2 2;
+
+/* 기본 속성 풀어서 표현 */
+flex-grow: 2;
+flex-shrink: 2;
+flex-basis: 0%;
+
+
+/* ==========================================
+   5. Three values: flex-grow | flex-shrink | flex-basis
+   ========================================== */
+/* 단축 속성 */
+flex: 2 2 10%;
+
+/* 기본 속성 풀어서 표현 */
+flex-grow: 2;
+flex-shrink: 2;
+flex-basis: 10%;
+
+```
+<br>
+
+## 마무리 정리
+
+
+## 1. CSS Box Model - display 속성
+
+웹 페이지에서 요소가 어떻게 보이고 다른 요소와 상호작용하는지를 결정합니다.
+
+* **Block 타입**
+* 항상 새로운 줄에서 시작하며, 사용 가능한 전체 너비를 차지
+* 대표적인 태그: `<h1>`~`<h6>`, `<p>`, `<div>`, `<ul>`, `<li>` 등
+
+
+* **Inline 타입**
+* 새로운 줄에서 시작하지 않고, 콘텐츠의 너비만큼만 공간을 차지
+* 대표적인 태그: `<a>`, `<img>`, `<span>` 등
+
+
+* **inline-block 타입**
+* inline처럼 줄 바꿈 없이 다른 요소와 나란히 배치되지만, block처럼 `width`와 `height` 값을 지정할 수 있음
+
+
+* **none 타입**
+* 요소를 화면에 표시하지 않으며, 레이아웃에서 차지하는 공간도 없어짐
+
+
+
+---
+
+## 2. CSS Position
+
+요소를 일반적인 흐름(Normal Flow)에서 벗어나 특정 위치에 배치하는 속성입니다.
+
+* **static**
+* 모든 요소의 기본값으로, Normal Flow에 따라 배치
+
+
+* **relative**
+* 자신의 원래 위치(static 위치)를 기준으로 이동
+* 이동 후에도 원래 있던 공간은 그대로 차지
+
+
+* **absolute**
+* Normal Flow에서 완전히 벗어나, `position` 속성을 가진 가장 가까운 조상 요소를 기준으로 위치가 결정
+
+
+* **fixed**
+* absolute처럼 Normal Flow에서 벗어나지만, 뷰포트(브라우저 창)를 기준으로 위치가 고정
+
+
+
+---
+
+## 3. CSS Flexbox
+
+### 기본 개념
+
+* 요소를 행 또는 열의 1차원 형태로 배치하고 정렬하는 레이아웃 방식
+
+### 핵심 구성 요소
+
+* **Flex Container**: `display: flex;`가 적용된 부모 요소
+* **Flex Item**: Flex Container의 직계 자식 요소들
+* **main axis (주 축)**: Flex Item들이 배치되는 기본 축
+* **cross axis (교차 축)**: 주 축에 수직인 축
+
+### Flex Container 관련 속성
+
+* `flex-direction`: 아이템이 정렬될 주 축의 방향을 설정 (`row`, `column` 등)
+* `flex-wrap`: 아이템이 한 줄에 들어가지 않을 때 줄 바꿈 여부를 결정 (`nowrap`, `wrap`)
+* `justify-content`: 주 축 방향으로 아이템들의 정렬과 간격을 제어 (`flex-start`, `center`, `space-between` 등)
+* `align-items`: 교차 축 방향으로 한 줄의 아이템들을 정렬 (`stretch`, `flex-start`, `center` 등)
+* `align-content`: 여러 줄의 아이템들이 있을 때 교차 축 방향으로 줄들의 간격과 정렬을 제어
+
+### Flex Item 관련 속성
+
+* `flex-grow`: 컨테이너에 여유 공간이 있을 때 아이템이 늘어나는 비율을 지정
+* `flex-basis`: 아이템의 초기 크기를 설정
+* `align-self`: 특정 아이템 하나만 개별적으로 교차 축 정렬을 변경할 수 있음
+
+---
+
+## 4. 핵심 키워드 정리
+
+| 개념 | 설명 | 예시 |
+| --- | --- | --- |
+| **display 속성** | 요소의 화면 배치 방식 정의 | `.item { display: block; }` |
+| **position 속성** | 요소 위치를 특정 기준에 맞춰 배치 | `.box { position: absolute; }` |
+| **z-index 속성** | 요소의 쌓이는 순서(Z축) 정의 | `.box { z-index: 10; }` |
+| **CSS Flexbox** | 1차원 레이아웃 배치 및 정렬 방식 | `.container { display: flex; }` |
+| **주 축 방향 설정** | Flex 아이템이 나열될 방향 지정 | `flex-direction: column;` |
+| **주 축 정렬** | 주 축의 아이템 정렬 및 간격 조정 | `justify-content: center;` |
+| **align-items** | 교차 축의 아이템 한 줄 정렬 | `align-items: center;` |
+
+---
+
+# ❓ 확인 문제 및 정답/해설
+
+### 1. 박스 모델에서 content 영역을 둘러싸고 있는 바깥 요소는?
+
+* a) padding
+* b) margin
+* c) border
+* d) display
+
+### 2. 다음 중 블록 박스의 특징으로 올바른 것은?
+
+* a) 같은 줄에 다른 요소를 배치할 수 있다
+* b) 너비가 내용에 따라 결정된다
+* c) 자동으로 줄 바꿈이 된다
+* d) 텍스트만 포함할 수 있다
+
+### 3. margin의 상하좌우 값을 한번에 설정 할 수 있는 shorthand 속성은?
+
+* a) spacing
+* b) area
+* c) box-style
+* d) margin
+
+### 4. 다음 중 box-sizing: border-box 설정의 효과는?
+
+* a) padding을 적용할 수 없다
+* b) width에 padding과 border가 포함된다
+* c) 요소가 자동으로 중앙 정렬된다
+* d) margin이 포함된다
+
+### 5. display 속성값 중 인라인과 블록 특성을 동시에 갖는 것은?
+
+* a) inline
+* b) block
+* c) inline-block
+* d) flex
+
+### 6. 다음 중 position 속성이 아닌 것은?
+
+* a) static
+* b) fixed
+* c) flexible
+* d) absolute
+
+### 7. position: relative를 사용하는 주된 이유는?
+
+* a) 요소를 뷰포트에 고정한다
+* b) 요소의 기준점을 설정한다
+* c) 다른 요소를 덮어쓴다
+* d) 중앙 정렬을 한다
+
+### 8. z-index가 적용되지 않는 position 값은?
+
+* a) absolute
+* b) fixed
+* c) relative
+* d) static
+
+### 9. Flexbox의 컨테이너 역할로 지정하는 속성은?
+
+* a) inline
+* b) float
+* c) display: flex
+* d) align-items
+
+### 10. flexbox에서 메인 축(main axis)을 제어하는 속성은?
+
+* a) justify-content
+* b) align-items
+* c) flex-direction
+* d) flex-shrink
+
+### 11. flex-wrap: wrap 설정 시의 효과는?
+
+* a) 아이템들이 넘치더라도 한 줄에 유지된다
+* b) 아이템들이 여러 줄로 자동으로 감싼다
+* c) 아이템들이 사라진다
+* d) flexbox가 적용되지 않는다
+
+### 12. 마진 상쇄(Margin Collapse)가 발생하는 경우는?
+
+* a) 일반적인 블록 형제 요소끼리
+* b) position: absolute가 적용된 요소
+* c) 인라인 요소 간
+* d) float 요소 간
+
+### 정답
+
+1. **a) padding**
+2. **c) 자동으로 줄 바꿈이 된다**
+3. **d) margin**
+4. **b) width에 padding과 border가 포함된다**
+5. **c) inline-block**
+6. **c) flexible**
+7. **b) 요소의 기준점을 설정한다**
+8. **d) static**
+9. **c) display: flex**
+10. **a) justify-content**
+11. **b) 아이템들이 여러 줄로 자동으로 감싼다**
+12. **a) 일반적인 블록 형제 요소끼리**
+
+---
+
+### 상세 해설
+
+1. **content 영역을 둘러싸고 있는 요소는 padding 입니다.**
+2. **블록 박스는 자동으로 줄 바꿈이 되며, 기본적으로 너비가 부모 요소를 채웁니다.**
+3. **margin은 shorthand 속성으로 상하좌우 간격을 한 번에 설정할 수 있습니다.**
+4. **border-box는 지정한 width 안에 padding과 border를 포함하여 계산합니다.**
+5. **inline-block은 한 줄에 배치되면서도 width, height 설정이 가능합니다.**
+6. **flexible은 유효한 position 속성이 아닙니다.**
+7. **relative는 원래 위치 기준으로 이동하고, 자식 요소 absolute의 기준점을 제공합니다.**
+8. **static인 요소에는 z-index가 적용되지 않습니다.**
+9. **display를 flex로 설정해야 해당 요소는 Flexbox 컨테이너가 됩니다.**
+10. **justify-content는 주 축 방향에서 항목을 정렬합니다.**
+11. **wrap은 아이템들이 공간이 부족할 경우 자동으로 다음 줄로 넘어 가도록 합니다.**
+12. **마진 상쇄는 일반적인 문서 흐름에 있는 블록 레벨 요소의 상하 마진에서만 발생하며, Float, Absolute, Flex, Grid, 인라인 요소 등에서는 발생하지 않습니다.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
