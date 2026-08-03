@@ -54,7 +54,7 @@
 - 닫는 태그는 태그 이름 앞에 슬래시가 포함됨
     - 닫는 태그가 없는 태그도 존재
 
-![alt text](image_sub/html_element.png)
+![alt text](image_day1/html_element.png)
 
 <br>
 
@@ -73,7 +73,7 @@
     2. 하나 이상의 속성들이 있는 경우 속성 사이에 공백으로 구분함
     3. 속성 값은 앞뒤에 따옴표로 감싸야 함
 
-![alt text](image_sub/html_attribute.png)
+![alt text](image_day1/html_attribute.png)
 
 <br>
 
@@ -83,7 +83,7 @@
 
 `<img>`: Image(이미지)의 약자로, src에 지정된 그림을 보여주는 태그
 
-![alt text](image_sub/html_구조예시1.png)
+![alt text](image_day1/html_구조예시1.png)
 <br>
 
 #### HTML Text Structure
@@ -137,18 +137,18 @@
 1. **인라인(inline) 스타일**
 - html 요소 안에 style 속성 값으로 잓어
 ** style 속성 값: 특정 요소 하나에만 css 스타일을 직접 적용하는 방식
-![alt text](image_sub/inline_style.png)
+![alt text](image_day1/inline_style.png)
 
 
 2. **내부(internal) 스타일 시트**
 - <u>head 태그</u> 안에 <u>style 태그</u>에 작성
 ** `<style>` 태그: css 코드를 작성하여 페이지 전체에 적용하는 태그
-![alt text](image_sub/internal_style.png)
+![alt text](image_day1/internal_style.png)
 
 
 3. **외부(External) 스타일 시트**
 - 별도 CSS 파일 생성 후 HTML <u>link 태그</u>를 사용해 불러오기
-![alt text](image_sub/external_style.png)
+![alt text](image_day1/external_style.png)
 
 
 ```
@@ -160,7 +160,7 @@
 
 ### CSS 구문
 
-![alt text](image_sub/선택자구문.png)
+![alt text](image_day1/선택자구문.png)
 
 * **선택자(Selector)**
   * '누구를' 꾸밀지 지정하는 부분
@@ -193,7 +193,7 @@
   * 주어진 속성이나 속성값을 가진 모든 요소 선택
   * 속성의 존재 여부, 값의 일치/포함 등 다양한 조건으로 요소를 정교하게 선택 가능
 
-![alt text](image_sub/기본_선택자.png)
+![alt text](image_day1/기본_선택자.png)
 <br>
 
 **결합자 (Combinators)**
@@ -207,7 +207,7 @@
     * 예) `p span`은 `<p>` 안에 있는 모든 `<span>`를 선택
      (하위 레벨 상관 없이)
 
-![alt text](image_sub/css_결합자.png)
+![alt text](image_day1/css_결합자.png)
 <br>
 
 
@@ -250,14 +250,14 @@
    * `id 선택자` > `class 선택자` > `요소 선택자`
 4. **소스 코드 선언 순서**
 
-![alt text](image_sub/명시도예시.png)
+![alt text](image_day1/명시도예시.png)
 <h13> 3번을 보면 green orange 순인데 class에 적혀있는 순서는 중요하지 않고, 선언 순서가 중요함 => orange보다 green이 나중에 선언되어 green으로 출력됨
 
 
 <br>
 
 ##### 명시도 퀴즈
-![alt text](image_sub/퀴즈.png)
+![alt text](image_day1/퀴즈.png)
 
 <br>
 

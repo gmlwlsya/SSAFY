@@ -11,10 +11,10 @@
 <br>
 
 ### 박스 구성 요소
-![alt text](images/박스모델_!.png)
+![alt text](images_day2/박스모델_!.png)
 
 
-![alt text](images/크기조정.png)
+![alt text](images_day2/크기조정.png)
 
 - width 조정은 박스의 전체 크기가 아니라 박스 안의 content 조정이다.
   - 예시, padding-left: 25는 오른쪽으로 25 이동
@@ -36,7 +36,7 @@
 
 2.  **'margin' &  'padding'**
 
-![alt text](images/short속성.png "center")
+![alt text](images_day2/short속성.png "center")
 
 <br>
 
@@ -54,7 +54,7 @@
     
     ** 컨텐츠 기준으로 설정된 값이라서 사람이 생각하는 크기가 아님
 
-![alt text](images/표준상자.png)
+![alt text](images_day2/표준상자.png)
 
 <br>
 
@@ -66,18 +66,18 @@
 
 * 실제 박스 크기를 정하기 위해 테두리와 패딩을 조정할 필요 없음
   
-  ![alt text](images/대체상자모델.png)
+  ![alt text](images_day2/대체상자모델.png)
 <br>
 
 #### 대체 상자 모델 변경
 
-![alt text](images/상자모델변경.png)
+![alt text](images_day2/상자모델변경.png)
 
 - `<div class="box content-box">` 
   - class box로 규격 설정
   - content-box로 모델 설정
 
-![alt text](images/표준대체상자모델.png)
+![alt text](images_day2/표준대체상자모델.png)
 
 
 ```
@@ -254,7 +254,7 @@
 
 <br>
 
-![alt text](images/인라인블록타입예시.png)
+![alt text](images_day2/인라인블록타입예시.png)
 
 <br>
 
@@ -267,7 +267,7 @@
 }
 ```
 
-![alt text](images/none타입.png)
+![alt text](images_day2/none타입.png)
 
 <br>
 <br>
@@ -295,14 +295,14 @@ CSS Layout
 - 네 가지 방향 속성(상, 하, 좌, 우)을 이용해 요소의 위치 조절 가능
 - 겹치는 요소의 쌓이는 순서를 조절할 수 있음
   
-![alt text](images/포지션이동방향.png)
+![alt text](images_day2/포지션이동방향.png)
 
 <br>
 
 ### 포지션 유형
 > **static, relative, absolute, fixed, sticky**
 
-![alt text](images/포지션기본.png)
+![alt text](images_day2/포지션기본.png)
 <br>
 
 ```
@@ -342,7 +342,7 @@ CSS Layout
     # 아래로 100, 오른쪽으로 100 이동
 }
 ```
-![alt text](images/relative_2.png)
+![alt text](images_day2/relative_2.png)
 
 ```
 relative 박스가 이동해도 원래 본인의 과거 위치는 그대로 유지
@@ -367,7 +367,7 @@ relative 박스가 이동해도 원래 본인의 과거 위치는 그대로 유�
     left: 100px;
 } 
 ```
-![alt text](images/absolute.png)
+![alt text](images_day2/absolute.png)
 
 ```
 예: 네이버 홈에서 중간 추천 탭의 재생 버튼이나 
@@ -379,7 +379,7 @@ relative 박스가 이동해도 원래 본인의 과거 위치는 그대로 유�
             - absolute 활용
 ```
 - 실제 포지션 활용 예시
-  ![alt text](images/absolute_ex.png)
+  ![alt text](images_day2/absolute_ex.png)
 
 <br>
 
@@ -399,7 +399,7 @@ relative 박스가 이동해도 원래 본인의 과거 위치는 그대로 유�
 } 
 ```
 
-![alt text](images/fixed.png)
+![alt text](images_day2/fixed.png)
 
 ```
 viewport 내가 보는 화면 
@@ -407,7 +407,7 @@ viewport 내가 보는 화면
 예: 웹툰의 이동 화살표
 ```
 - 실제 활용 예시
-  ![alt text](images/fixed_ex.png)
+  ![alt text](images_day2/fixed_ex.png)
 <br>
 
 #### 5. sitcky
@@ -417,10 +417,10 @@ viewport 내가 보는 화면
 - 다음 stiky 요소가 나오면 이전 stiky 요소의 자리를 대체
   - 이전 stiky 요소와 다음 stiky 요소의 위치가 겹치게 되기 때문
 
-![alt text](images/stiky.png)
+![alt text](images_day2/stiky.png)
 
 - 실제 활용 예시
-  ![alt text](images/sticky_ex.png)
+  ![alt text](images_day2/sticky_ex.png)
 
 ```
 참고) web > 03_css_layout_position
@@ -459,7 +459,7 @@ viewport 내가 보는 화면
 
 <br>
 
-![alt text](images/z-index.png)
+![alt text](images_day2/z-index.png)
   -  원래는 파랑이초록위, 초록이 빨강 위에 있어야 함
 이건 반대
 ```
@@ -519,7 +519,7 @@ viewport 내가 보는 화면
 > **main axis, cross axis, flex container, flex item**
 <br>
 
-![alt text](images/flex구성요소.png)
+![alt text](images_day2/flex구성요소.png)
 <br>
 
 #### 1. main axis (주 축) 
@@ -601,7 +601,7 @@ viewport 내가 보는 화면
   display: flex;
 }
 ```
-![alt text](images/플렉스컨데이너지정.png)
+![alt text](images_day2/플렉스컨데이너지정.png)
 <br>
 
 
@@ -617,7 +617,7 @@ viewport 내가 보는 화면
 <details>
 <summary>상세 속성 이미지</summary>
 <!-- 토글 안에 들어갈 내용 (이미지 마크다운) -->
-![alt text](images/flex-direction.png)
+![alt text](images_day2/flex-direction.png)
 </details>
 
 
@@ -629,7 +629,7 @@ viewport 내가 보는 화면
   /* flex-direction: column-reverse; */
 }
 ```
-![alt text](images/플렉스방향.png)
+![alt text](images_day2/플렉스방향.png)
 
 <br>
 
@@ -651,7 +651,7 @@ viewport 내가 보는 화면
 <details>
 <summary>상세 속성 이미지</summary>
 <!-- 토글 안에 들어갈 내용 (이미지 마크다운) -->
-![alt text](images/flex-wrap.png)
+![alt text](images_day2/flex-wrap.png)
 </details>
 
 
@@ -662,7 +662,7 @@ viewport 내가 보는 화면
   /* flex-wrap: wrap-reverse; */
 } # 화면 너비를 줄여서 확인하기
 ```
-![alt text](images/플렉스왭.png)
+![alt text](images_day2/플렉스왭.png)
 
 <br>
 
@@ -677,7 +677,7 @@ viewport 내가 보는 화면
 <details>
 <summary>상세 속성 이미지</summary>
 <!-- 토글 안에 들어갈 내용 (이미지 마크다운) -->
-![alt text](images/justify-content.png)
+![alt text](images_day2/justify-content.png)
 </details>
 
 ```css
@@ -687,7 +687,7 @@ viewport 내가 보는 화면
   /* justify-content: flex-end; */
 }
 ```
-![alt text](images/저스티파이콘덴츠.png)
+![alt text](images_day2/저스티파이콘덴츠.png)
 
 <br>
 
@@ -712,7 +712,7 @@ viewport 내가 보는 화면
 <details>
 <summary>상세 속성 이미지</summary>
 <!-- 토글 안에 들어갈 내용 (이미지 마크다운) -->
-![alt text](images/align-content.png)
+![alt text](images_day2/align-content.png)
 </details>
 
 ```css
@@ -724,7 +724,7 @@ viewport 내가 보는 화면
   /* align-content: flex-end; */
 }
 ```
-![alt text](images/5_align.png)
+![alt text](images_day2/5_align.png)
 
 
 <br>
@@ -742,7 +742,7 @@ viewport 내가 보는 화면
 <details>
 <summary>상세 속성 이미지</summary>
 <!-- 토글 안에 들어갈 내용 (이미지 마크다운) -->
-![alt text](images/align-items.png)
+![alt text](images_day2/align-items.png)
 </details>
 
 ```css
@@ -753,7 +753,7 @@ viewport 내가 보는 화면
   /* align-items: flex-end; */
 }
 ```
-![alt text](images/6_align_items.png)
+![alt text](images_day2/6_align_items.png)
 
 <br>
 
@@ -774,7 +774,7 @@ viewport 내가 보는 화면
 <details>
 <summary>상세 속성 이미지</summary>
 <!-- 토글 안에 들어갈 내용 (이미지 마크다운) -->
-![alt text](images/align-self.png)
+![alt text](images_day2/align-self.png)
 </details>
 
 
@@ -787,7 +787,7 @@ viewport 내가 보는 화면
   align-self: flex-end;
 }
 ```
-![alt text](images/7_align-self.png)
+![alt text](images_day2/7_align-self.png)
 ---
 
 ### Flexbox 정리 & 요약
@@ -823,7 +823,7 @@ viewport 내가 보는 화면
 * **남는 행 여백을 비율에 따라 각 flex item에 분배**
 * flex item이 컨테이너 내에서 확장하는 비율을 지정
 
-![alt text](images/8_flexgrow.png)
+![alt text](images_day2/8_flexgrow.png)
 
 <br>
 
@@ -859,7 +859,7 @@ viewport 내가 보는 화면
 * 다양한 디바이스와 화면 크기에 자동으로 적응하여 콘텐츠를 최적으로 표시하는 웹 레이아웃 방식
 * `flex-wrap`을 사용해 반응형 레이아웃 작성 (`flex-grow` & `flex-basis` 활용)
 
-  ![alt text](images/반응형레이아웃.png)
+  ![alt text](images_day2/반응형레이아웃.png)
 
 <br>
 
@@ -882,7 +882,7 @@ viewport 내가 보는 화면
 ## 참고
 ### 마진 상쇄 (margin collapsing)
 - 두 block 타입 요소의 margin top과 bottom이 만나 더 큰 margin으로 결합되는 현상
-  ![alt text](images/마진상쇄.png)
+  ![alt text](images_day2/마진상쇄.png)
 
 <br>
 
