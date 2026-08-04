@@ -410,7 +410,7 @@ viewport 내가 보는 화면
   ![alt text](images_day2/fixed_ex.png)
 <br>
 
-#### 5. sitcky
+#### 5. sticky
 - relative와 fixed의 특성을 결합한 속성
 - 스크롤 위치가 임계점에 도달하기 전에는 relative처럼 동작
 - 스크롤 위치가 임계점에 도달하면 fixed처럼 화면에 고정
