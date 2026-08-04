@@ -535,3 +535,113 @@ h1 {
 > * 페이지 하단의 '브라우저 호환성' 표를 꼭 확인해서, 내가 쓸 기술의 지원 범위를 파악하세요.
 > * 기술명 옆 'Deprecated(폐기 예정)' 같은 표시를 꼭 확인하는 습관을 들이세요.
 > * OpenAI가 최신 버전을 반드시 반영하는 게 아니기 때문에 직접 실습하며 공부해 보세요.
+
+<br>
+------
+##### 실습
+HTML에서 사용자 입력을 받고 제출하기 위해 사용하는 핵심 태그인 **`form`**, **`label`**, `input`에 대한 정리입니다.
+
+---
+
+## 1. 태그별 핵심 개념
+
+### 📋 `<form>`
+
+* **역할:** 사용자로부터 받은 입력값을 서버로 전송하기 위해 모든 입력 양식을 감싸는 **최상위 컨테이너 태그**입니다.
+* **주요 속성:**
+* `action`: 입력 데이터를 전송할 서버의 URL 경로 지정
+* `method`: 데이터 전송 방식 지정 (`GET` 또는 `POST`)
+
+
+
+### 🏷️ `<label>`
+
+* **역할:** 입력 양식(`<input>`)에 이름을 붙여주는 **라벨(제목) 태그**입니다.
+* **특징:** 라벨 텍스트를 클릭해도 연결된 `<input>`에 자동으로 포커싱(선택)되어 사용성(웹 접근성)을 높여줍니다.
+* **연결 방법:** `<label>`의 `for` 속성값과 `<input>`의 `id` 속성값을 **동일하게 일치**시켜 연결합니다.
+
+### 📥 `<input>`
+
+* **역할:** 실제 사용자가 데이터를 입력할 수 있는 **입력 창 태그**입니다. (닫는 태그가 없는 빈 태그입니다.)
+* **주요 속성:**
+* `type`: 입력 양식의 형태 결정 (`text`, `password`, `email`, `checkbox`, `radio`, `submit` 등)
+* `name`: 서버로 데이터를 보낼 때 구분하기 위한 **변수명**
+* `id`: `<label>`과 연결하기 위한 고유 식별자
+
+
+
+---
+
+## 2. HTML 종합 예시 코드
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Form 기본 예시</title>
+</head>
+<body>
+
+    <h2>회원가입 폼</h2>
+
+    <!-- form: 서버 전송 목적지(action)와 전송 방식(method) 지정 -->
+    <form action="/submit-handler" method="POST">
+        
+        <!-- 1. 텍스트 입력 (Label - Input 연결 예시) -->
+        <div>
+            <!-- for 속성값과 input의 id 속성값을 통일 -->
+            <label for="username">아이디:</label>
+            <input type="text" id="username" name="username" placeholder="아이디를 입력하세요" required>
+        </div>
+
+        <br>
+
+        <!-- 2. 비밀번호 입력 -->
+        <div>
+            <label for="userpw">비밀번호:</label>
+            <input type="password" id="userpw" name="userpw" required>
+        </div>
+
+        <br>
+
+        <!-- 3. 라디오 버튼 (하나만 선택) -->
+        <div>
+            <span>성별:</span>
+            <!-- name 속성값을 동일하게 맞춰야 하나의 그룹으로 묶임 -->
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">남성</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">여성</label>
+        </div>
+
+        <br>
+
+        <!-- 4. 체크박스 (중복 선택 가능) -->
+        <div>
+            <label for="agree">약관에 동의합니다.</label>
+            <input type="checkbox" id="agree" name="agree" value="yes">
+        </div>
+
+        <br>
+
+        <!-- 5. 제출 버튼 -->
+        <div>
+            <input type="submit" value="가입하기">
+        </div>
+
+    </form>
+
+</body>
+</html>
+
+```
+
+---
+
+## 💡 핵심 요약
+
+1. **`<form>`** 안에 입력 양식을 넣는다.
+2. `<label for="A">`와 `<input id="A">`의 값을 똑같이 맞춰 연결한다.
+3. 서버로 데이터를 전송할 때 데이터의 이름표 역할을 하는 **`name` 속성**을 `<input>`에 꼭 적어준다.
