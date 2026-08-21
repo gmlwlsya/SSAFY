@@ -1,32 +1,33 @@
 # 방법1
 # 이미지 범위 내 문자 프린트 
 # 해당 출력으로 경로내이미즈프린트 -> md 작성
-for i in range(1, 219):
-    if i < 10:
-        text = f'![alt text](image_day07/page_000{i}.jpg)'
-        print(text)
+# last_page = 178
+# md_title = "08.4-2.Agent모델.md"
 
-    elif i < 100:
-        text = f'![alt text](image_day07/page_00{i}.jpg)'
-        print(text)
-    else:
-        text = f'![alt text](image_day07/page_0{i}.jpg)'
-        print(text)
+# for i in range(1, last_page + 1):
+#     print(f'![alt text](image_day08/page_{i:04d}.jpg)\n')
+
+# print(f"{md_title} 파일 작성이 완료되었습니다!")
 # 위 코드로 그대로 파일 저장 시 터미널에서 아래 코드 실행(파일명 변경 가능)
-# python image_idx_print.py > output_images.md
+# python image_idx_print.py > AI/08.4-2.Agent모델.md
 
 
 # 방법2
-# 결과를 저장할 파일명 설정 (py, md, txt 등 변경 가능)
-# 파일명 변경 가능
-output_filename = "output_images.md"
+import os
 
-with open(output_filename, "w", encoding="utf-8") as f:
-    # 범위 변경 가능
-    for i in range(1, 219):
-        # zfill(4)를 사용하면 1 -> '0001', 12 -> '0012', 100 -> '0100' 으로 자동 맞춤됩니다.
-        formatted_num = str(i).zfill(4)
-        text = f"![alt text](image_day07/page_{formatted_num}.jpg)\n"
-        f.write(text)
+# page 설정
+last_page = 178
 
-print(f"저장이 완료되었습니다: {output_filename}")
+# 파일명
+md_title ="08.4-2.Agent모델.md"
+
+# AI 폴더 하위에 저장되도록 경로 설정
+output_path = os.path.join("AI", md_title)
+
+# 파일 생성 및 작성
+with open(output_path, "w", encoding="utf-8") as f:
+    for i in range(1, last_page + 1):
+        f.write(f'![alt text](image_day08/page_{i:04d}.jpg)\n')
+
+# 터미널에는 완료 메시지만 깔끔하게 출력
+print(f"🎉 {output_path} 파일 작성이 완료되었습니다!")
